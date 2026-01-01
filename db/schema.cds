@@ -1,14 +1,20 @@
 namespace my.soccer;
 
-//축구 선수 엔티티 (테이블)
 entity Players {
-    key Id  : UUID;
-    firstName : String;
-    lastName :String;
-    team : String;
-    position : String;
-    shirtNumber : Integer;
+    key ID : Integer;          
+    name : String;            
+    team : String;            
+    nationality : String;   
+    position : String;        
+    overall : Integer;        
+    potential : Integer;      
+    value : Double;            // 이적료 가치 (Euro)
     
+    // 상세 스탯 (육각형 스탯)
+    pace : Integer;           
+    shooting : Integer;      
+    passing : Integer;        
+    dribbling : Integer;      
+    defending : Integer;    
+    physical : Integer;        
 }
-
-
