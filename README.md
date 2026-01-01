@@ -29,8 +29,10 @@
 ```bash
 # 의존성 설치 및 Spring Boot 서버 실행
 mvn clean spring-boot:run
+```
 
 ---
+
 ## 📅 Dev Log (개발 일지)
 
 ### Day 1: 프로젝트 셋업 및 기본 설계 (2026.01.01)
