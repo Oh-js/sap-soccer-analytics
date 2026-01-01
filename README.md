@@ -8,8 +8,8 @@
 - **Platform:** SAP BTP (Cloud Foundry)
 - **Framework:** SAP CAP (Java / Spring Boot)
 - **Database:** SAP HANA Cloud (Production), H2 Database (Local)
-- **Language:** Java 17, CDS
-- **Tools:** SAP Business Application Studio, VS Code
+- **Language:** Java 17, CDS, Python (Data Processing)
+- **Tools:** SAP Business Application Studio, VS Code, Postman
 
 ## 📂 주요 기능 (Features)
 - **데이터 모델링 (CDS):** 축구 선수(Player), 팀(Team), 경기(Match) 엔티티 설계
