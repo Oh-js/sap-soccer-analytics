@@ -53,13 +53,15 @@ mvn clean spring-boot:run
 ### Day 2: EA Sports FC 24 데이터셋 확장 적용 (2026.01.02)
 
 **✅ 오늘 한 일 (Done)**
-1. **스키마 확장:** 단순 인적 사항을 넘어 `Overall`, `Potential`, `Pace`, `Shooting` 등 14개 분석 지표로 엔티티 확장.
-2. **데이터 ETL:** EA Sports FC 24 원본 데이터셋을 정제하여 주요 선수 20명의 상세 능력치 데이터를 CSV로 변환(골키퍼 제외).
-3. **DB Seeding:** 확장된 데이터 모델에 맞춰 가공된 CSV 파일을 로드하여 분석 가능한 데이터 베이스 구축.
+1. **스키마 수정:** acceleration, sprintSpeed, finishing 등 12가지 상세 스탯으로 엔티티 수정.
+2. **데이터 ETL:** Python 스크립트(convert_fc25.py)를 작성하여 Kaggle의 EA Sports FC 25 + 실제 선수 데이터 (SoFIFA 병합)
+를 추출 및 가공. url: https://www.kaggle.com/datasets/sametozturkk/ea-sports-fc-25-real-player-data-sofifa-merge
+3. **DB Seeding:** 가공된 실제 선수 데이터(my.soccer-Players.csv)를 로컬 DB에 적재하여 정밀 분석이 가능한 환경 구축.
 
 **🧠 배운 점 (Learned)**
-- **Schema Design:** 분석 목적에 맞게 필요한 컬럼을 선정하고 데이터 타입(Integer, Double)을 적절히 배치하는 법을 익힘.
+- **Schema Design:** 분석 목적에 맞게 필요한 컬럼을 선정하고 데이터 타입(Integer)을 적절히 배치하는 법을 익힘.
 - **Data Quality:** 원본 데이터(Raw Data)의 포맷(쉼표 포함 등)을 시스템에 맞게 전처리(Preprocessing)하는 과정의 중요성을 배움.
+- **CAP Seeding 규칙:** CSV 파일명은 반드시 namespace-entity.csv 형식을 지켜야만 DB에 자동 입력된다는 것을 확인함.
 
 **📸 실행 결과**
-- 웹 브라우저에서 음바페(Pace: 97), 손흥민(Shooting: 88) 등 상세 능력치 조회 성공.
+- 웹 브라우저에서 'Tottenham' 선수 검색하여 상세 능력치 조회 성공.
