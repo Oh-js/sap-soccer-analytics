@@ -1,0 +1,101 @@
+ID,name,team,nationality,position,overall,potential,value,acceleration,sprintSpeed,agility,finishing,shotPower,shortPassing,longPassing,ballControl,dribbling,standingTackle,stamina,strength
+231866,Rodri,Manchester City,Spain,CDM,91,91,115500000,65,66,66,74,92,93,91,90,84,87,91,83
+209331,Mohamed Salah Hamed Ghaly,Liverpool,,RM,91,91,104000000,89,89,89,95,83,88,81,90,90,43,88,75
+252371,Jude Victor William Bellingham,Real Madrid,England,CAM,90,94,174500000,81,80,82,89,85,90,89,89,89,79,93,80
+239085,Erling Braut Håland,Manchester City,Norway,ST,90,92,157000000,80,94,77,96,94,77,66,83,79,47,76,93
+238794,Vini Jr.,Real Madrid,,CAM,90,94,171500000,95,95,94,89,81,83,77,90,93,25,84,65
+231747,Kylian Mbappé Lottin,Real Madrid,France,ST,90,93,160000000,97,97,93,92,90,85,74,92,93,34,87,77
+203376,Virgil van Dijk,Liverpool,Netherlands,CB,90,90,77500000,66,87,54,52,81,80,86,77,70,91,75,93
+202126,Harry Edward Kane,FC Bayern München,England,ST,90,90,117500000,64,65,66,95,94,86,79,87,80,46,75,86
+256630,Florian Richard Wirtz,Bayer 04 Leverkusen,Germany,CAM,89,92,143500000,82,79,87,84,78,91,88,92,90,49,87,59
+212831,Alisson,Liverpool,,GK,89,89,54500000,60,49,40,13,64,60,58,42,27,19,32,78
+192985,Kevin De Bruyne,Manchester City,,CM,89,89,63500000,67,67,73,84,92,93,93,91,85,70,70,75
+192119,Thibaut Nicolas Marc Courtois,Real Madrid,,GK,89,89,51000000,42,52,63,14,57,33,35,23,13,18,38,70
+188545,Robert Lewandowski,FC Barcelona,Poland,ST,89,89,44000000,76,75,77,92,89,84,70,90,85,42,76,89
+256790,Jamal Musiala,FC Bayern München,Germany,CAM,88,92,133500000,87,80,94,86,80,86,79,84,94,62,78,59
+246669,Bukayo Saka,Arsenal,England,RW,88,90,121000000,88,84,85,85,79,85,77,88,89,62,86,68
+239053,Federico Santiago Valverde Dipetta,Real Madrid,,CM,88,91,120000000,84,91,77,79,91,87,88,88,83,85,92,82
+233419,Raphinha,FC Barcelona,,LM,88,88,97500000,90,91,88,87,83,83,78,87,88,54,88,65
+231478,Lautaro Javier Martínez,Inter,Argentina,ST,88,88,101500000,83,79,88,93,87,78,72,84,81,51,83,85
+212622,Joshua Walter Kimmich,FC Bayern München,Germany,CDM,88,88,78000000,75,59,83,68,78,89,92,86,82,84,88,68
+205452,Antonio Rüdiger,Real Madrid,Germany,CB,88,88,62500000,71,91,56,40,84,84,81,74,69,88,70,91
+200389,Jan Oblak,Atlético Madrid,,GK,88,88,48500000,42,53,64,11,59,43,40,30,12,14,42,78
+192448,Marc-André ter Stegen,FC Barcelona,,GK,88,88,45000000,45,50,39,14,67,61,63,30,21,13,35,78
+257534,Cole Jermaine Palmer,Chelsea,England,CAM,87,90,111000000,76,78,81,85,85,87,86,89,87,53,81,62
+251854,Pedri,FC Barcelona,Spain,CM,87,90,110000000,79,76,88,72,68,89,86,90,89,77,88,73
+243715,William Alain André Gabriel Saliba,Arsenal,France,CB,87,89,92000000,77,86,53,35,60,84,79,82,74,89,72,88
+237383,Alessandro Bastoni,Inter,Italy,CB,87,89,88500000,71,77,64,39,59,80,84,82,74,89,81,84
+234378,Declan Rice,Arsenal,England,CDM,87,88,85000000,71,75,55,64,87,85,86,84,82,86,92,81
+232580,Gabriel,Arsenal,,CB,87,88,82500000,61,76,51,37,62,80,76,71,59,88,71,87
+232293,Victor James Osimhen,Galatasaray SK,,ST,87,89,101500000,90,92,78,88,86,72,54,84,80,45,81,86
+231443,Masour Ousmane Dembélé,Paris Saint-Germain,France,RW,87,87,85000000,94,91,94,82,87,82,78,87,89,42,76,54
+230621,Gianluigi Donnarumma,Paris Saint-Germain,Italy,GK,87,89,76000000,50,55,57,12,53,36,34,30,28,14,41,75
+224232,Nicolò Barella,Inter,Italy,CM,87,87,84500000,82,78,91,77,80,88,86,87,84,83,93,74
+222665,Martin Ødegaard,Arsenal,Norway,CAM,87,89,99500000,72,69,85,83,82,90,89,90,88,72,88,55
+215698,Mike Peterson Maignan,AC Milan,France,GK,87,89,68000000,65,62,60,15,64,64,61,40,30,16,39,83
+213331,Jonathan Glao Tah,Bayer 04 Leverkusen,Germany,CB,87,87,68500000,53,86,49,32,60,78,68,69,60,89,69,92
+207865,Marquinhos,Paris Saint-Germain,,CB,87,87,65500000,76,81,68,59,65,84,85,79,69,89,83,79
+194765,Antoine Griezmann,Atlético Madrid,,ST,87,87,51000000,80,76,89,87,85,88,85,91,87,63,84,71
+177683,Yann Sommer,Inter,,GK,87,87,9000000,48,54,57,13,64,46,38,30,22,19,45,68
+158023,Lionel Andrés Messi Cuccitini,Inter Miami,Argentina,RW,87,87,26000000,86,73,89,85,83,85,84,89,89,35,70,68
+277643,Lamine Yamal,FC Barcelona,Spain,CAM,86,95,140500000,86,83,92,80,80,84,75,88,91,20,73,45
+246191,Julián Álvarez,Atlético Madrid,Argentina,CAM,86,89,94000000,86,85,87,88,88,83,78,87,87,55,85,72
+243812,Rodrygo,Real Madrid,,CAM,86,91,102500000,90,88,87,85,76,80,73,88,90,34,81,59
+241651,Viktor Einar Gyökeres,Sporting CP,Sweden,ST,86,89,90000000,88,92,81,88,87,76,58,82,80,34,93,91
+241486,Jules Olivier Koundé,FC Barcelona,France,CB,86,89,83000000,85,83,71,47,48,82,75,78,74,86,82,81
+239837,Alexis Mac Allister,Liverpool,Argentina,CM,86,88,84500000,71,67,82,79,88,87,86,86,84,80,87,69
+239818,Rúben Dias,Manchester City,Portugal,CB,86,87,68500000,58,62,62,29,74,83,81,75,64,87,78,89
+239580,Bremer,Juventus,,CB,86,88,72500000,78,86,65,49,68,75,69,68,62,87,75,89
+237692,Philip Walter Foden,Manchester City,England,CAM,86,88,88000000,86,82,92,84,89,84,82,89,89,59,83,53
+235212,Achraf Hakimi Mouh,Paris Saint-Germain,Morocco,RB,86,88,78500000,89,94,81,75,82,83,73,83,80,79,94,72
+235073,Gregor Kobel,Borussia Dortmund,,GK,86,89,68500000,38,52,37,10,48,39,33,34,24,15,30,81
+233731,Alexander Isak,Newcastle United,Sweden,ST,86,88,89500000,85,87,81,88,87,78,60,87,88,34,80,78
+232656,Theo Bernard François Hernández,AC Milan,France,LB,86,87,73000000,93,93,83,71,86,81,70,85,83,84,89,85
+231281,Trent John Alexander-Arnold,Liverpool,England,CM,86,87,74000000,73,79,73,64,85,89,92,85,79,82,89,68
+228702,Frenkie de Jong,FC Barcelona,Netherlands,CM,86,86,72000000,80,83,87,72,68,90,87,88,86,75,87,73
+220901,David Raya,Arsenal,Spain,GK,86,87,54000000,64,59,68,19,65,62,67,43,19,14,31,38
+215441,Serhou Yadaly Guirassy,Borussia Dortmund,,ST,86,86,69500000,70,71,75,87,87,83,71,86,83,29,78,85
+212198,Bruno Fernandes,Manchester United,Portugal,CAM,86,86,66500000,72,68,78,82,86,89,90,86,82,71,95,61
+211110,Paulo Bruno Exequiel Dybala,Roma,Argentina,CAM,86,86,65500000,84,76,88,84,84,84,79,89,87,42,74,67
+210257,Ederson,Manchester City,,GK,86,86,45000000,64,63,60,14,68,65,68,45,30,15,44,78
+208128,Hakan Çalhanoğlu,Inter,,CDM,86,86,57000000,74,68,83,75,87,90,89,87,78,83,81,72
+204963,Carvajal,Real Madrid,Spain,RB,86,86,47000000,82,81,78,56,68,84,74,85,78,84,84,74
+202811,Damián Emiliano Martínez Romero,Aston Villa,Argentina,GK,86,86,36000000,55,57,54,16,63,61,59,43,24,20,40,78
+200104,Heung-Min Son,Tottenham Hotspur,,LW,86,86,56500000,86,84,81,85,89,83,72,86,86,34,88,69
+199503,Granit Xhaka,Bayer 04 Leverkusen,,CDM,86,86,47500000,48,52,51,67,90,89,90,83,73,79,84,78
+165153,Karim Benzema,Al Ittihad,,ST,86,86,23000000,76,77,77,87,87,86,76,87,84,24,80,81
+262621,Giorgi Mamardashvili,Valencia CF,,GK,85,88,57500000,48,48,40,9,54,20,20,22,11,12,45,74
+256516,Nico Williams,Athletic Club,Spain,RM,85,89,78500000,94,92,92,76,78,81,64,85,88,28,81,60
+256079,Moisés Isaac Caicedo Corozo,Chelsea,,CDM,85,88,68000000,78,73,80,57,72,85,82,83,78,88,87,77
+255253,Vitinha,Paris Saint-Germain,Portugal,CAM,85,89,77000000,75,69,91,77,76,88,85,87,87,77,81,59
+253163,Ronald Federico Araújo da Silva,FC Barcelona,,CB,85,90,71500000,76,86,56,56,68,75,66,68,55,85,72,87
+247851,Bruno Guimarães,Newcastle United,,CM,85,86,56500000,69,68,78,72,78,87,87,85,85,82,88,79
+247827,Michael Akpovie Olise,FC Bayern München,France,CAM,85,88,75000000,83,74,89,81,78,86,79,85,87,58,75,54
+247819,Nico Cedric Schlotterbeck,Borussia Dortmund,Germany,CB,85,88,66000000,78,76,68,51,75,78,86,71,74,87,74,84
+247635,Khvicha Kvaratskhelia,Paris Saint-Germain,,CAM,85,89,77500000,85,86,86,80,78,83,76,87,88,39,77,72
+244260,Dani Olmo,FC Barcelona,Spain,CAM,85,86,63500000,78,70,86,80,79,87,81,87,87,50,66,54
+241721,Rafael Leão,AC Milan,Portugal,RM,85,88,71500000,93,93,84,83,80,83,70,86,87,24,75,83
+241096,Sandro Tonali,Newcastle United,Italy,CDM,85,87,63000000,81,86,81,69,85,85,83,85,78,84,83,82
+241084,Luis Fernando Díaz Marulanda,Liverpool,,LM,85,85,57500000,91,90,88,83,85,77,72,87,89,47,87,69
+240130,Éder Militão,Real Madrid,,CB,85,88,62500000,81,88,70,48,62,78,76,72,70,86,85,79
+237678,Ibrahima Konaté,Liverpool,France,CB,85,87,60000000,70,82,55,29,45,78,76,74,67,86,74,90
+230869,Unai Simón,Athletic Club,Spain,GK,85,86,46000000,48,50,37,14,57,38,34,16,12,18,44,76
+229558,Dayotchanculle Oswald Upamecano,FC Bayern München,France,CB,85,88,63500000,76,82,66,39,64,79,78,76,72,84,77,87
+226268,Federico Dimarco,Inter,,LB,85,86,58000000,83,78,84,74,81,84,83,86,81,81,85,78
+223848,Sergej Milinković-Savić,Al Hilal,,CM,85,85,52500000,62,66,60,81,82,82,86,87,85,77,92,90
+218667,Bernardo Silva,Manchester City,Portugal,CM,85,85,52500000,71,64,93,78,79,86,82,88,88,76,90,54
+215914,N'Golo Kanté,Al Ittihad,France,CDM,85,85,26500000,79,74,78,64,71,80,79,80,78,90,82,72
+210514,João Cancelo,Al Hilal,,RB,85,85,46500000,88,77,79,69,80,87,79,87,85,83,88,62
+210035,Grimaldo,Bayer 04 Leverkusen,Spain,LM,85,85,54500000,77,71,84,67,84,86,85,86,84,78,90,63
+204485,Riyad Mahrez,Al Ahli SFC,,RM,85,85,33500000,83,76,91,81,82,83,75,89,88,34,79,58
+193080,De Gea,Fiorentina,,GK,85,85,17500000,47,45,60,13,52,40,39,32,18,16,30,38
+186153,Wojciech Tomasz Szczęsny,FC Barcelona,,GK,85,85,9000000,49,46,55,12,56,51,66,22,11,13,45,65
+177003,Luka Modrić,Real Madrid,Croatia,CM,85,85,17000000,75,69,91,70,79,89,89,90,84,72,72,58
+20801,Cristiano Ronaldo,Al Nassr,Portugal,ST,85,85,18500000,71,78,76,87,91,77,70,85,77,32,80,79
+272834,João Neves,Paris Saint-Germain,Portugal,CM,84,90,63500000,80,74,84,69,73,86,85,86,83,82,90,73
+256675,Omar Khaled Mohamed Marmoush,Manchester City,,CAM,84,85,51000000,87,91,89,87,85,85,63,86,87,30,76,67
+253149,Jeremie Agyekum Frimpong,Bayer 04 Leverkusen,Netherlands,RM,84,86,54500000,96,91,89,66,62,78,64,84,85,78,85,56
+251517,Joško Gvardiol,Manchester City,Croatia,CB,84,87,54500000,80,79,68,68,81,81,76,81,79,85,79,83
+247394,Dejan Kulusevski,Tottenham Hotspur,Sweden,CAM,84,87,57500000,76,74,79,80,76,85,78,85,88,66,92,82
+246104,Ryan Jiro Gravenberch,Liverpool,Netherlands,CM,84,87,53500000,78,74,81,76,78,85,83,86,87,81,85,79
+245367,Xavier Quentin Shay Simons,RB Leipzig,Netherlands,CAM,84,89,65000000,86,77,90,79,78,84,79,85,87,62,83,63

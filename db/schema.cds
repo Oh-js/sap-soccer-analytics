@@ -2,19 +2,31 @@ namespace my.soccer;
 
 entity Players {
     key ID : Integer;          
-    name : String;            
+    name : String;             
     team : String;            
-    nationality : String;   
-    position : String;        
-    overall : Integer;        
+    nationality : String;      
+    position : String;         
+    overall : Integer;         
     potential : Integer;      
-    value : Double;            // 이적료 가치 (Euro)
-    
-    // 상세 스탯 (육각형 스탯)
-    pace : Integer;           
-    shooting : Integer;      
-    passing : Integer;        
-    dribbling : Integer;      
-    defending : Integer;    
-    physical : Integer;        
+    value : Integer;           
+
+    // --- Movement ---
+    acceleration : Integer;    
+    sprintSpeed : Integer;     
+    agility : Integer;         
+
+    // --- Shooting ---
+    finishing : Integer;       
+    shotPower : Integer;      
+
+    // --- Passing & Dribbling ---
+    shortPassing : Integer;    
+    longPassing : Integer;     
+    ballControl : Integer;     
+    dribbling : Integer;    
+
+    // --- Defending & Physical  ---
+    standingTackle : Integer;  
+    stamina : Integer;         
+    strength : Integer;     
 }
