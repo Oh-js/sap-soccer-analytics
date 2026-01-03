@@ -73,6 +73,7 @@ mvn clean spring-boot:run
 2. **CDS View 모델링:** 자주 사용하는 조건(공격수)을 가상 엔티티(`Strikers`)로 정의하여 조회 효율성 증대.
 3. **데이터 분석(Analytics):** `$apply`와 `aggregate` 기능을 활용하여 '팀별 평균 능력치', '국적별 선수 수' 등 통계 데이터 추출.
 4. **스키마 고도화:** FC 26 최신 데이터셋을 도입하고, 분석 차원을 넓히기 위해 피지컬(키, 몸무게), 주급, 주발/약발 등 상세 컬럼 추가.
+url: https://www.kaggle.com/datasets/rovnez/fc-26-fifa-26-player-data
 
 **🧠 배운 점 (Learned)**
 - **View의 장점:** 복잡한 쿼리 조건을 미리 정의해두고 재사용함으로써 클라이언트의 요청을 단순화할 수 있음.
