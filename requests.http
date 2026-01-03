@@ -1,0 +1,41 @@
+### ---------------------------------------------------
+### 1. 기본 조회 및 필터링 (Basic & Filtering)
+### ---------------------------------------------------
+
+### 1. 전체 선수 조회 (기본)
+GET http://localhost:8080/odata/v4/AnalyticsService/Players
+
+### 2. [피지컬 괴물] 키 190cm 이상, 몸싸움 85 이상인 '타겟형 스트라이커' 찾기 
+GET http://localhost:8080/odata/v4/AnalyticsService/Players?$filter=position eq 'ST' and height ge 190 and strength ge 85
+
+### 3. [희귀 매물] '왼발잡이' 센터백(CB) 찾기 (전술적 가치가 매우 높음) 
+GET http://localhost:8080/odata/v4/AnalyticsService/Players?$filter=position eq 'CB' and preferredFoot eq 'Left'
+
+### 4. [테크니션] 개인기(Skill Moves) 5성 & 약발(Weak Foot) 5성인 양발잡이 
+GET http://localhost:8080/odata/v4/AnalyticsService/Players?$filter=skillMoves eq 5 and weakFoot eq 5
+
+### 5. [가성비 유망주] 잠재력 85 이상이지만, 몸값은 3천만 유로 미만인 선수
+GET http://localhost:8080/odata/v4/AnalyticsService/Players?$filter=potential ge 85 and value lt 30000000&$orderby=potential desc
+
+### ---------------------------------------------------
+### 2. 데이터 분석 및 통계 (Analytics & Aggregation)
+### ---------------------------------------------------
+
+### 6. [팀 전력 분석] 평균 오버롤이 가장 높은 팀 순위
+GET http://localhost:8080/odata/v4/AnalyticsService/Players?$apply=groupby((team),aggregate(overall with average as avg_overall))&$orderby=avg_overall desc
+
+### 7. [재정 분석] 평균 주급(Wage)이 가장 높은 '부자 구단' 순위 (NEW!)
+GET http://localhost:8080/odata/v4/AnalyticsService/Players?$apply=groupby((team),aggregate(wage with average as avg_wage))&$orderby=avg_wage desc
+
+### 8. [인구 조사] 우리 DB(Top 500)에 어느 나라 선수가 제일 많을까?
+GET http://localhost:8080/odata/v4/AnalyticsService/Players?$apply=groupby((nationality),aggregate($count as player_count))&$orderby=player_count desc
+
+### ---------------------------------------------------
+### 3. 미리 정의된 뷰 (CDS Views)
+### ---------------------------------------------------
+
+### 9. 공격수(ST, CF) 전용 뷰 조회
+GET http://localhost:8080/odata/v4/AnalyticsService/Strikers
+
+### 10. 월드클래스(오버롤 88 이상) 뷰 조회
+GET http://localhost:8080/odata/v4/AnalyticsService/WorldClass
