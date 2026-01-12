@@ -39,3 +39,22 @@ GET http://localhost:8080/odata/v4/AnalyticsService/Strikers
 
 ### 10. 월드클래스(오버롤 88 이상) 뷰 조회
 GET http://localhost:8080/odata/v4/AnalyticsService/WorldClass
+
+### [Validation] 나이를 10살로 수정 시도 (에러가 나야 성공!)
+PATCH http://localhost:8080/odata/v4/AnalyticsService/Players(20801)
+Content-Type: application/json
+
+{
+    "age": 10
+}
+
+### [Action] 호날두(20801)를 'My Dream Team'으로 영입하기 (POST)
+POST http://localhost:8080/odata/v4/AnalyticsService/Players(20801)/signPlayer
+Content-Type: application/json
+
+{
+    "teamName": "My Dream Team FC"
+}
+
+### [확인] 호날두(20801) 정보 다시 조회
+GET http://localhost:8080/odata/v4/AnalyticsService/Players(20801)

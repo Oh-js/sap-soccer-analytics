@@ -82,3 +82,20 @@ url: https://www.kaggle.com/datasets/rovnez/fc-26-fifa-26-player-data
 **📸 실행 결과**
 - `requests.http`를 통해 '왼발잡이 센터백', '키 190cm 이상 타겟터' 등 복합 조건 검색 성공.
 - 팀별 평균 몸값 분석을 통해 구단 재정 순위 도출 완료.
+
+### Day 4: 비즈니스 로직과 데이터 검증 (2026.01.12)
+
+**✅ 오늘 한 일 (Done)**
+1. **커스텀 액션(Action) 구현:** `signPlayer` 기능을 통해 특정 선수를 원하는 팀으로 이적시키는 비즈니스 로직 개발.
+2. **데이터 검증(Validation) 로직:** `@Before` 핸들러를 사용하여 15세 미만 선수의 등록/수정을 원천 봉쇄하는 '유소년 보호' 로직 적용.
+3. **Java 핸들러 개발:** SAP CAP Java SDK의 `EventHandler`, `CqnAnalyzer`를 활용하여 안전하고 효율적인 DB 제어 코드 작성.
+4. **테스트 자동화:** `requests.http`를 이용해 'Validation 에러 케이스'와 'Action 성공 케이스'를 검증.
+
+**🧠 배운 점 (Learned)**
+- **Handler의 개념:** API 요청이 DB에 닿기 전/후에 Java 코드가 개입하여 로직을 처리하는 흐름 이해.
+- **CQN Analyzer:** 복잡한 OData 요청 URL에서 ID(Key)를 안전하게 추출하는 방법 습득.
+- **Troubleshooting:** Java 컴파일 에러와 자동 생성 파일(SignPlayerContext) 간의 의존성 문제를 해결하며 빌드 프로세스 이해.
+
+**📸 실행 결과**
+- 나이 10세 수정 시도 -> `400 Bad Request` 에러 발생 성공.
+- '호날두' 영입 실행 -> 소속 팀이 'My Dream Team'으로 변경됨.
