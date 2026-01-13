@@ -1,7 +1,7 @@
 namespace my.soccer;
 
 entity Players {
-      key ID : Integer;
+    key ID : Integer;
     name : String;
     team : String;
     nationality : String;

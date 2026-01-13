@@ -7,13 +7,14 @@
 ## 🛠 기술 스택 (Tech Stack)
 - **Platform:** SAP BTP (Cloud Foundry)
 - **Framework:** SAP CAP (Java / Spring Boot)
-- **Database:** SAP HANA Cloud (Production), H2 Database (Local)
-- **Language:** Java 17, CDS, Python (Data Processing)
-- **Tools:** SAP Business Application Studio, VS Code, Postman
+- **Database:** SAP HANA Cloud (Production), SQLite (Local Persistence)
+- **Language:** Java 17, CDS, Python (Data Processing), Node.js (Tooling)
+- **Tools:** SAP Business Application Studio, VS Code, Postman, Git
 
 ## 📂 주요 기능 (Features)
 - **데이터 모델링 (CDS):** 축구 선수(Player), 팀(Team), 경기(Match) 엔티티 설계
-- **OData 서비스:** RESTful API를 통한 데이터 조회 및 관리
+- **OData 서비스:** RESTful API를 통한 데이터 조회(Read), 생성(Create), 수정(Update), 삭제(Delete)
+- **비즈니스 로직:** 선수 영입(Action), 유소년 보호 검증(Validation) 로직 구현
 - **(예정)** Vector Engine을 활용한 선수 스타일 유사도 검색 (AI)
 - **(예정)** Fiori Elements 기반의 관리자 대시보드
 
@@ -25,10 +26,17 @@
 - Java 17 (Spring Boot)
 - Maven
 
-### 2. 실행 명령어
+### 2. 실행 명령어 (Terminal)
 ```bash
-# 의존성 설치 및 Spring Boot 서버 실행
-mvn clean spring-boot:run
+# 1. 의존성 설치 (프로젝트 루트)
+npm install
+
+# 2. DB 파일 생성 및 스키마 배포 (Draft 테이블 포함)
+# * 주의: 데이터 스키마가 변경될 때마다 실행 필요
+npx cds deploy --to sqlite
+
+# 3. 로컬 서버 실행 (파일 DB 모드)
+npx cds watch
 ```
 
 ---
@@ -99,3 +107,33 @@ url: https://www.kaggle.com/datasets/rovnez/fc-26-fifa-26-player-data
 **📸 실행 결과**
 - 나이 10세 수정 시도 -> `400 Bad Request` 에러 발생 성공.
 - '호날두' 영입 실행 -> 소속 팀이 'My Dream Team'으로 변경됨.
+
+### Day 5: 로컬 DB 영구 저장 구현 및 환경 트러블슈팅 (2026.01.14)
+
+**✅ 오늘 한 일 (Done)**
+- **데이터 영구 저장(Persistence) 구현:** 서버 재시작 시 데이터가 초기화되던 In-Memory 방식에서, 파일 기반(`sqlite.db`)의 영구 저장 방식으로 전환 성공.
+- **CAP & UI5 연동 안정화:** 백엔드 서비스 경로와 프론트엔드 호출 경로 불일치 문제 해결.
+- **Draft(임시 저장) 기능 활성화:** Fiori Elements의 수정 기능을 위한 Draft 테이블 생성 및 배포.
+
+### 🛠️ 트러블슈팅 (Troubleshooting)
+
+**1. `better-sqlite3` 빌드 에러 및 경로 충돌**
+- **문제:** `cds watch` 실행 시 시스템 공용(Global) 모듈을 참조하여 버전 충돌 및 바인딩 에러 발생.
+- **해결:** - 프로젝트 로컬에 의존성 재설치 (`npm install`)
+    - 네이티브 모듈 리빌드 (`npm rebuild better-sqlite3`)
+    - `npx cds watch`를 사용하여 로컬 모듈 강제 실행.
+
+**2. UI5 화면 404 에러 (White Screen)**
+- **문제:** 백엔드 서비스는 소문자(`analytics`)로 열렸으나, UI5는 대문자(`AnalyticsService`)로 요청하여 데이터 로드 실패.
+- **해결:** `webapp/manifest.json`의 `dataSources` URI를 서버 로그와 동일하게 수정.
+
+**3. "no such table: ..._drafts" 에러**
+- **문제:** SQLite DB 파일 생성 시, 일반 테이블만 생성되고 Draft(가수정)용 테이블이 누락되어 데이터 수정 불가.
+- **해결:** `npx cds deploy --to sqlite` 명령어를 통해 Draft 테이블까지 포함하여 스키마 재배포.
+
+**🧠 배운 점 (Learned)**
+- **Persistence Model:** 복잡한 OData 요청 URL에서 ID(Key)를 안전하게 추출하는 방법 습득.
+- **Persistence Mode:** package.json 설정을 통해 In-Memory와 File-Based DB를 전환하는 방법을 익힘.
+
+**📸 실행 결과**
+- 서버를 재시작해도 'Kane' 선수 영입 상태가 유지됨을 확인 (영구 저장 성공).

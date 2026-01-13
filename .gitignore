@@ -17,6 +17,10 @@ default-env.json
 **/node/
 **/node_modules/
 
+node_modules/
+sqlite.db
+*.db
+
 **/.mta/
 *.mtar
 
