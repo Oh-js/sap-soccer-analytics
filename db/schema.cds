@@ -1,58 +1,71 @@
 namespace my.soccer;
 
+// 1. 구단 (Teams) 
+entity Teams {
+    key code : String(3);   // 예: TOT, MCI (PK)
+    name : String;          // 예: Tottenham Hotspur
+    league : String;        // 예: Premier League
+    
+    // 역방향 연결: "이 팀을 클릭하면 소속 선수들을 보여줘"
+    players : Association to many Players on players.team = $self;
+}
+
+// 2. 선수 (Players)
 entity Players {
     key ID : Integer;
     name : String;
-    team : String;
+    
+    // 핵심 변경: String -> Association (글자가 아니라 '연결'됨)
+    team : Association to Teams;
+    
     nationality : String;
     position : String;
     overall : Integer;
     potential : Integer;
     value : Integer;
     
-    // --- 💰 Financial (새로 추가) ---
-    wage : Integer;            // 주급 (wage_eur)
+    // --- Financial ---
+    wage : Integer;
 
-    // --- 🧬 Physical & Profile (새로 추가) ---
-    age : Integer;             // 나이
-    height : Integer;          // 키 (cm)
-    weight : Integer;          // 몸무게 (kg)
-    preferredFoot : String;    // 주발 (Left/Right)
-    weakFoot : Integer;        // 약발 (1-5)
-    skillMoves : Integer;      // 개인기 (1-5)
+    // --- Physical & Profile ---
+    age : Integer;
+    height : Integer;
+    weight : Integer;
+    preferredFoot : String;
+    weakFoot : Integer;
+    skillMoves : Integer;
 
-    // --- 🏃 Movement ---
+    // --- Movement ---
     acceleration : Integer;
     sprintSpeed : Integer;
     agility : Integer;
 
-    // --- ⚽ Shooting ---
+    // --- Shooting ---
     finishing : Integer;
     shotPower : Integer;
 
-    // --- 🎯 Passing & Dribbling ---
+    // --- Passing & Dribbling ---
     shortPassing : Integer;
     longPassing : Integer;
     ballControl : Integer;
     dribbling : Integer;
 
-    // --- 🛡️ Defending & Physical ---
+    // --- Defending & Physical ---
     standingTackle : Integer;
     stamina : Integer;
     strength : Integer;
 
-    // --- 🧤 Goalkeeping  ---
+    // --- Goalkeeping ---
     gkDiving : Integer;
     gkHandling : Integer;
     gkReflexes : Integer;
 }
 
-// 1. 공격수 전용 뷰 (ST, CF 포지션만 모아보기)
+// 3. 공격수 전용 뷰 
 entity Strikers as select from Players {
-    
     key ID,
     name,
-    team,
+    team, // 이제 이 team은 연결고리(Association) 역할을 합니다.
     finishing, 
     shotPower,
     sprintSpeed,
@@ -60,5 +73,4 @@ entity Strikers as select from Players {
     value,
     agility,
     strength
-
 } where position in ('ST', 'CF');

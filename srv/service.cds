@@ -4,11 +4,16 @@ service AnalyticsService {
     
     // 1. Edit 버튼 활성화 (Draft 모드)
     @odata.draft.enabled
+    @cds.redirection.target
     entity Players as projection on soccer.Players actions {
         // 2. 선수 영입 버튼 정의
         action signPlayer(teamName: String) returns Players;
     };
 
+
+    //2. 팀 목록
+    @readonly entity Teams as projection on soccer.Teams;
+    // 3. 공격수 뷰 
     @readonly entity Strikers as projection on soccer.Strikers;
 }
 
