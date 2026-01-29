@@ -153,5 +153,22 @@ url: https://www.kaggle.com/datasets/rovnez/fc-26-fifa-26-player-data
 - **Troubleshooting:** `no such table` 에러의 원인이 '코드(설계도)와 DB 파일(실제 건물)의 싱크 불일치'임을 파악하고, 배포 프로세스를 통해 해결하는 능력 배양.
 
 **📸 실행 결과**
-- **전체 선수 목록:** 800명 데이터 로딩 성공. `team_code`만 저장되어 있지만 화면에는 참조된 **긴 팀 이름(예: Tottenham Hotspur)**이 자동으로 매핑되어 표시됨.
+- **전체 선수 목록:** 792명 데이터 로딩 성공. `team_code`만 저장되어 있지만 화면에는 참조된 **긴 팀 이름(예: Tottenham Hotspur)**이 자동으로 매핑되어 표시됨.
 - **팀 할당 기능:** 수정 화면에서 코드를 직접 입력하는 대신 팝업을 통해 **팀 이름으로 검색 및 선택**하면 해당 팀 코드(예: TOT)가 자동으로 입력되는 기능 확인.
+
+### Day 7: 데이터 분석과 집계 뷰(Aggregation) 구현 (2026.01.30)
+
+**✅ 오늘 한 일 (Done)**
+1. **분석용 뷰(CDS View) 설계:** `db/schema.cds`에 `group by` 구문을 사용하여 팀별 데이터를 그룹화하는 `TeamStats` 엔티티 생성.
+2. **데이터 집계(Aggregation) 로직 구현:** `count`(선수 수), `sum`(가치 총액), `avg`(평균) 등 SQL 집계 함수를 활용하여 자동 계산 로직 적용.
+3. **데이터 정제(Data Cleansing):** `round()` 함수를 사용하여 평균 나이와 능력치의 소수점을 반올림 처리, 데이터 가독성 확보.
+
+**🧠 배운 점 (Learned)**
+- **CDS View의 강력함:** 별도의 Java/Python 코드 없이 DB 뷰만으로 복잡한 통계 데이터를 실시간으로 계산해내는 효율성 체감.
+- **Aggregation & Grouping:** 데이터를 특정 기준(팀 코드)으로 묶고 요약하는 관계형 데이터베이스의 핵심 원리 이해.
+- **Data Precision:** 소수점 처리(`Decimal` vs `Double`)와 `round` 함수를 통해 UI 표현에 적합한 데이터 형태로 가공하는 법 습득.
+- **Fiori Preview:** 백엔드 로직 변경(View 생성)이 별도의 프론트엔드 코딩 없이 UI에 즉시 반영되는 Fiori Elements의 생산성 확인.
+
+**📸 실행 결과**
+- `AnalyticsService/TeamStats` 엔드포인트 생성 확인.
+- Fiori UI에서 팀별 '선수 수', '평균 나이(28.3세)', '구단 가치 총액'이 계산되어 내림차순 정렬된 표 확인.

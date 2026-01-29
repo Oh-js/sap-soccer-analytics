@@ -15,6 +15,9 @@ service AnalyticsService {
     @readonly entity Teams as projection on soccer.Teams;
     // 3. 공격수 뷰 
     @readonly entity Strikers as projection on soccer.Strikers;
+
+    //4. TeamStats
+    @readonly entity TeamStats as projection on soccer.TeamStats;
 }
 
 // ---------------------------------------------------------

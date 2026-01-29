@@ -56,4 +56,33 @@ annotate service.Players with @(
             { Value: potential, Label: '잠재력' }
         ]
     }
+
+    
+    
+);
+// 1. 목록에 표시할 컬럼 설정
+annotate service.TeamStats with @(
+    UI.LineItem: [
+        // 중요도가 높은 순서대로 배치
+        { Value: teamName, Label: '팀 이름', @UI.Importance: #High },
+        { Value: playerCount, Label: '선수 규모(명)' },
+        { Value: totalValue, Label: '구단 가치 총액 (€)' }, 
+        { Value: avgOverall, Label: '평균 전력(Overall)' },
+        { Value: avgAge, Label: '평균 연령' }
+    ],
+
+    // 2. 상단 제목 설정
+    UI.HeaderInfo: {
+        TypeName: 'Team Stat',
+        TypeNamePlural: 'Team Stats',
+        Title: { Value: teamName },
+        Description: { Value: teamCode }
+    },
+
+    // 3. 기본 정렬 (구단 가치가 높은 순서대로!)
+    UI.PresentationVariant : {
+        SortOrder : [
+            { Property : totalValue, Descending : true }
+        ]
+    }
 );

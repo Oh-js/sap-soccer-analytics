@@ -74,3 +74,14 @@ entity Strikers as select from Players {
     agility,
     strength
 } where position in ('ST', 'CF');
+
+entity TeamStats as select from Players{
+    key team.code as teamCode,
+    team.name as teamName,
+
+    count(ID) as playerCount : Integer,
+    round(avg(age), 1) as avgAge : Decimal(10,1),
+    sum(value) as totalValue : Integer,
+    round(avg(overall), 1) as avgOverall : Decimal(10,1)
+
+} group by team.code, team.name;
