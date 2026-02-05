@@ -172,3 +172,20 @@ url: https://www.kaggle.com/datasets/rovnez/fc-26-fifa-26-player-data
 **📸 실행 결과**
 - `AnalyticsService/TeamStats` 엔드포인트 생성 확인.
 - Fiori UI에서 팀별 '선수 수', '평균 나이(28.3세)', '구단 가치 총액'이 계산되어 내림차순 정렬된 표 확인.
+
+### Day 8: Fiori UI 심화 - Criticality & Filter (2026.02.05)
+
+**✅ 오늘 한 일 (Done)**
+1. **Semantic Coloring 적용:** `annotations.cds`에 `Criticality: #Positive` 속성을 추가하여 성적 데이터를 시각적으로 강조(초록색 텍스트).
+2. **검색 필터(Filter Bar) 추가:** `UI.SelectionFields`를 활용하여 상단에 '팀 이름' 검색 필터 생성.
+3. **Excel Export 기능 확인:** Fiori Elements가 기본 제공하는 엑셀 다운로드 기능 동작 검증.
+
+**🧠 배운 점 (Learned)**
+- **Fiori Annotations:** 자바스크립트 코딩 없이 설정(Annotation)만으로 UI의 동작과 디자인을 제어하는 원리 체감.
+- **Criticality:** 데이터의 상태를 색상으로 표현하여 대시보드의 가독성을 높이는 방법.
+- **Enterprise Search Standard:** SAP 표준 검색 방식인 'Exact Match'와 와일드카드(`*`) 활용법에 대한 이해.
+
+**📸 실행 결과**
+- `TeamStats` 화면에서 평균 전력 점수가 초록색으로 표시됨.
+- 상단 필터바에 `TOt*` 입력 시 Tottenham Hotspur 검색되는 표준 동작 확인.
+- 엑셀 버튼 클릭 시 현재 조회된 데이터가 `.xlsx`로 정상 다운로드됨.
