@@ -189,3 +189,23 @@ url: https://www.kaggle.com/datasets/rovnez/fc-26-fifa-26-player-data
 - `TeamStats` 화면에서 평균 전력 점수가 초록색으로 표시됨.
 - 상단 필터바에 `TOt*` 입력 시 Tottenham Hotspur 검색되는 표준 동작 확인.
 - 엑셀 버튼 클릭 시 현재 조회된 데이터가 `.xlsx`로 정상 다운로드됨.
+
+### Day 9: SAP HANA Cloud 배포 및 하이브리드 연결 (2026.02.07)
+
+**✅ 오늘 한 일 (Done)**
+* **HANA Cloud 인스턴스 생성:** SAP BTP Cockpit에서 `hana-free` 티어를 사용하여 `soccer-db` 생성 및 관리자(DBADMIN) 계정 설정.
+* **프로젝트-DB 연결 설정:** `cds add hana` 명령어로 프로젝트에 HANA 설정을 추가하고, `@cap-js/hana` 드라이버 수동 설치.
+* **네트워크 보안 설정 (Troubleshooting):** BTP 보안 정책에 외부 접속 허용을 위해 'Allow all IP addresses' 옵션 활성화 및 사용자 권한(Role Collection) 부여.
+* **클라우드 배포 (Deploy):** `cds deploy --to hana` 명령어를 통해 로컬의 데이터 모델(CDS)과 CSV 데이터를 실제 클라우드 DB로 전송(HDI Container 생성).
+* **하이브리드 테스트:** `cds watch --profile hybrid` 모드로 실행하여, 서버는 로컬(내 컴퓨터)에 있지만 데이터는 클라우드(HANA)에서 가져오는 환경 구축.
+
+**🧠 배운 점 (Learned)**
+* **On-Premise vs Cloud:** 로컬 개발용 `SQLite`와 배포용 `HANA DB`의 차이점 이해 및 `Hybrid` 프로파일의 필요성 학습.
+* **HDI Container:** 마이크로서비스 아키텍처에서 각 애플리케이션이 독립적으로 사용하는 격리된 DB 컨테이너 개념 이해.
+* **BTP Security:** 클라우드 리소스 접근 시 필요한 IP 화이트리스트 관리와 관리자 권한(Role)의 중요성 체감.
+* **Database Explorer:** SAP HANA Database Explorer를 통해 SQL 콘솔 없이도 클라우드 DB 내부 데이터를 엑셀처럼 검증하는 방법 습득.
+
+**📸 실행 결과**
+* **배포 성공:** `cds deploy` 실행 시 `Deployment successful` 메시지 확인.
+* **DB 연결:** `npx cds watch --profile hybrid` 실행 시 로그에 `[cds] - connect to db > hana` 연결 성공 확인.
+* **데이터 검증:** SAP HANA Database Explorer에서 `MY_SOCCER_PLAYERS` 테이블 조회 시, CSV 데이터가 클라우드에 정상 적재된 것 확인.

@@ -22,6 +22,8 @@
         }
       }
     }
+  },
+  "dependencies": {
+    "@cap-js/hana": "^2.6.0"
   }
-
 }
